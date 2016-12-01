@@ -432,9 +432,20 @@
     
     <!-- ******마이페이지****** -->
     <section id="mypage" class="about section">
-      <form class="form-horizontal" style="width: 800px; height:800px; margin-left:250px; margin-top: 50px">
-  <fieldset>
-    <legend>My page</legend>
+    <!-- 탭메뉴 -->
+			<div class="form-group" style="width: 800px; margin-left: 200px">
+				<ul class="nav nav-tabs">
+				<li class="active"><a href="#fev" data-toggle="tab" aria-expanded="false">찜목록</a></li>
+				  <li class=""><a href="#myupdate" data-toggle="tab" aria-expanded="true">Mypage</a></li>
+				</ul>
+		    </div>
+		    
+	<!-- 탭내용 -->
+	<div id="myTabContent" class="tab-content" style="width: 800px; margin-left: 200px">
+    
+    <!-- mypage탭 -->
+     <div id="myupdate" class="tab-pane fade">
+     <form class="form-horizontal" style="width: 800px; height:800px; margin-left:0px; margin-top: 50px">
     <!-- 이메일 -->
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">*Email</label>
@@ -451,36 +462,46 @@
       </div>
     </div>
     
-    <!-- 주소 -->
-     <div class="form-group">
+          <!-- 주소 -->
+           <div class="form-group">
             <label for="addr" class='col-lg-2 control-label'>*Address</label>
              <div class="col-lg-10"> 
             <input type="text" class="form-control" placeholder="'동'을 입력하세요" style="width: 400px"/>
               <button type="submit" class="btn btn-primary btn-sm" onclick="openAddr()" >주소검색</button>
             </div> 
-         
+          </div>
 	      <!-- 선호카테고리 check box -->
-    <div class="form-group">
-    	 <label for="addr" class='col-lg-2 control-label'>*선호 카테고리(2개이하)</label>
-    	 	<div class="col-lg-10"> 
-           <div class="checkbox">
-          <label class="checkbox-inline"><input type="checkbox" value="유아"> 유아</label>
-          <label class="checkbox-inline"><input type="checkbox" value="행정/법률"> 행정/법률</label>
-          <label class="checkbox-inline"><input type="checkbox" value="여성"> 여성</label>
-          <label class="checkbox-inline"><input type="checkbox" value="환경"> 환경</label>
-          	</div>
-        </div>
-    </div>
+		    <div class="form-group">
+		    	 <label for="addr" class='col-lg-2 control-label'>*선호 카테고리(2개이하)</label>
+		    	 	<div class="col-lg-10"> 
+		           <div class="checkbox">
+		          <label class="checkbox-inline"><input type="checkbox" value="유아"> 유아</label>
+		          <label class="checkbox-inline"><input type="checkbox" value="행정/법률"> 행정/법률</label>
+		          <label class="checkbox-inline"><input type="checkbox" value="여성"> 여성</label>
+		          <label class="checkbox-inline"><input type="checkbox" value="환경"> 환경</label>
+		          	</div>
+		        </div>
+		    </div>
     
-     <!-- 버튼  -->
+          <!-- 버튼  -->
+          <div class="form-group">
 	      <div class="col-lg-10 col-lg-offset-2" style="margin-left: 380px">
 	        <button type="reset" class="btn btn-default">취소</button>
 	        <button type="submit" class="btn btn-primary">수정</button>
 	      </div>
-    </div>
-    </fieldset>
+	      </div>
     </form>
+   </div> 
+   
+   
+    <!-- 찜목록 내용 -->
+     <div class="tab-pane fade active in" id="fev">
+    ddd
+    </div>
+    
+   </div> 
     </section><!--//mypage-->
+    
     
     <!-- ******정당메이커 게임******* -->
     <section id="game" class="docs section">
