@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-     <link rel="stylesheet" href="assets/css/slide.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -66,10 +65,9 @@
                         <li class="nav-item"><a class="scrollto" href="#license">지역</a></li>                        
                         <li class="nav-item"><a class="scrollto" href="#contact">당선인</a></li>
                         <li class="nav-item"><a class="scrollto" href="#game">당신은 정당메이커$</a></li>
-                        <li class="nav-item"><a href="#join" data-toggle="modal" data-target="#join" data-whatever="join">Join</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#features">Login</a></li>
-                        <li class="nav-item"><a href="#mypage" data-toggle="modal" data-target="#mypage" data-whatever="mypage">MyPage</a></li>
-                        <li class="nav-item"><a href="#admin" data-toggle="modal" data-target="#admin" data-whatever="admin">Admin</a></li>
+                        <li class="nav-item"><a href="#join" data-toggle="modal" data-target="#join" data-whatever="join">회원가입</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#features">로그인</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#mypage">마이페이지</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -78,7 +76,7 @@
     
     <!-- ******PROMO****** -->
     <section id="promo" class="promo section offset-header">
-        <div class="container text-center" style="height: 470px">
+        <div class="container text-center">
             <h2 class="title">말<img src="assets/images/logo/logo.png" width="180px" height="180px"><span class="highlight">하는대로</span></h2>
             <!-- 검색 -->
 		  <form class="form-inline">
@@ -92,6 +90,17 @@
 		    <input type="password" class="form-control" id="inputPassword2" placeholder="검색어를 입력하세요." style="width: 500px">
 		  </div>
 		  <button type="submit" class="btn btn-primary">검색</button>
+		<br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 		</form>
         </div><!--//container-->
         <div class="social-media">
@@ -126,12 +135,13 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title" id="joinLabel">Join us</h4>
+					<h4 class="modal-title" id="joinLabel"></h4>
 				      </div>
 				      
 				   <div class="modal-body">
 							<form class="form-horizontal" style="width: 550px; ">
 							  <fieldset>
+							    <legend>Join us</legend>
 							    <!-- 이메일 -->
 							    <div class="form-group">
 							      <label for="inputEmail" class="col-lg-2 control-label">*Email</label>
@@ -436,21 +446,14 @@
     </form>
     </section><!--//features-->
     
-    <!-- 관리자 로그인 -->
-    <div id="admin" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-				    <div class="modal-content">
-				      <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-					<h4 class="modal-title" id="joinLabel">Admin</h4>
-				      </div>
-				      
-				   <div class="modal-body">
-             <form class="form-horizontal" >
+    <!-- ******마이페이지****** -->
+    <section id="mypage" class="about section">
+      <form class="form-horizontal" style="width: 800px; height:800px; margin-left:250px; margin-top: 50px">
   <fieldset>
+    <legend>My page</legend>
     <!-- 이메일 -->
     <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <label for="inputEmail" class="col-lg-2 control-label">*Email</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" id="inputEmail" placeholder="Email">
       </div>
@@ -458,163 +461,42 @@
     
     <!-- 비밀번호 -->
     <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <label for="inputPassword" class="col-lg-2 control-label">*Password</label>
       <div class="col-lg-10">
         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
       </div>
     </div>
     
-    <!-- 버튼  -->
+    <!-- 주소 -->
+     <div class="form-group">
+            <label for="addr" class='col-lg-2 control-label'>*Address</label>
+             <div class="col-lg-10"> 
+            <input type="text" class="form-control" placeholder="'동'을 입력하세요" style="width: 400px"/>
+              <button type="submit" class="btn btn-primary btn-sm" onclick="openAddr()" >주소검색</button>
+            </div> 
+         
+	      <!-- 선호카테고리 check box -->
+    <div class="form-group">
+    	 <label for="addr" class='col-lg-2 control-label'>*선호 카테고리(2개이하)</label>
+    	 	<div class="col-lg-10"> 
+           <div class="checkbox">
+          <label class="checkbox-inline"><input type="checkbox" value="유아"> 유아</label>
+          <label class="checkbox-inline"><input type="checkbox" value="행정/법률"> 행정/법률</label>
+          <label class="checkbox-inline"><input type="checkbox" value="여성"> 여성</label>
+          <label class="checkbox-inline"><input type="checkbox" value="환경"> 환경</label>
+          	</div>
+        </div>
+    </div>
+    
+     <!-- 버튼  -->
+	      <div class="col-lg-10 col-lg-offset-2" style="margin-left: 380px">
+	        <button type="reset" class="btn btn-default">취소</button>
+	        <button type="submit" class="btn btn-primary">수정</button>
+	      </div>
+    </div>
     </fieldset>
     </form>
-												 
-							</div>
-					
-					 <div class="modal-footer">
-						<!-- 버튼  -->
-						<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-						<button type="button" class="btn btn-primary">로그인</button>
-					 
-					 </div>
-					 
-				</div>	
-			</div>		  
-		</div>
-    
-   
-   <!-- ******마이페이지****** -->
-
-	<div id="mypage" class="modal fade" tabindex="-1" role="dialog"
-		aria-labelledby="mypageLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="mypageLabel">MyPage</h4>
-				</div>
-
-				<div class="modal-body">
-					<!-- 탭메뉴 -->
-					<div class="form-group" style="width: 500px;">
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#fev" data-toggle="tab"
-								aria-expanded="false">찜목록</a></li>
-							<li class=""><a href="#myupdate" data-toggle="tab"
-								aria-expanded="true">MyPage</a></li>
-						</ul>
-					</div>
-
-					<!-- 탭내용 -->
-					<div id="myTabContent" class="tab-content"
-						style="width: 500px;">
-
-						<!-- mypage탭 -->
-						<div id="myupdate" class="tab-pane fade">
-							<form class="form-horizontal" style="width: 500px;">
-								<!-- 이메일 -->
-							    <div class="form-group">
-							      <label for="inputEmail" class="col-lg-2 control-label">*Email</label>
-							      <div class="col-lg-10">
-							        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-							      </div>
-							    </div>
-							    
-							    <!-- 비밀번호 -->
-							    <div class="form-group">
-							      <label for="inputPassword" class="col-lg-2 control-label">*Password</label>
-							      <div class="col-lg-10">
-							        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-							      </div>
-							    </div>
-							    
-							    <!-- 주소 -->
-							     <div class="form-group">
-							            <label for="addr" class='col-lg-2 control-label'>*Address</label>
-							             <div class="col-lg-10"> 
-							            <input type="text" class="form-control" placeholder="'동'을 입력하세요" />
-							              <button type="submit" class="btn btn-primary btn-sm" onclick="openAddr()" >주소검색</button>
-							            </div> 
-							    </div>
-							    
-							    <!-- 선호카테고리 check box -->
-							    <div class="form-group">
-							    	 <label for="addr" class='col-lg-2 control-label' style="width: 200px">*선호카테고리(2개이하)</label>
-							    	 	<div class="col-lg-10"> 
-							           <div class="checkbox" style="margin-left: 80px">
-							          <label class="checkbox-inline"><input type="checkbox" value="유아"> 유아</label>
-							          <label class="checkbox-inline"><input type="checkbox" value="행정/법률"> 행정/법률</label>
-							          <label class="checkbox-inline"><input type="checkbox" value="여성"> 여성</label>
-							          <label class="checkbox-inline"><input type="checkbox" value="환경"> 환경</label>
-							          	</div>
-							        </div>
-							    </div>
-
-								<div class="modal-footer">
-									 <!-- 버튼  -->
-										<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-										<button type="button" class="btn btn-primary">수정</button>
-								</div>
-							</form>
-						</div>
-
-
-						<!-- 찜목록 내용 -->
-						<div class="tab-pane fade active in" id="fev">
-
-							<!-- 상위 이미지 -->
-							<!--     			<img alt="정당 색상" src="assets/images/minju.png" height="50px" width="800px"> -->
-							<button type="button" class="btn btn-primary ribbon">Primary</button>
-							<!-- 우리동네 정치인 -->
-							<form class="form-inline">
-								<div class="form-group">
-									<!-- 지도 -->
-									<iframe width="200" height="200" scrolling="no"
-										frameborder="no"
-										src="https://fusiontables.google.com/embedviz?q=select+col4+from+1aJGtcsPnbN04x1m3AICpRAMASbK7HRxRrj-5WV-0&amp;viz=MAP&amp;h=false&amp;lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe>
-								</div>
-
-								<div class="form-group" style="position: relative; top: -20px">
-									<!--국회의원 상세 내용 -->
-									<table class="table table-striped table-hover ">
-										<thead>
-											<tr>
-												<th>번호</th>
-												<th>정당</th>
-												<th>이름</th>
-												<th>Column heading</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Column content</td>
-												<td>Column content</td>
-												<td>Column content</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Column content</td>
-												<td>Column content</td>
-												<td>Column content</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</form>
-							<!-- 슬라이드 이미지 -->
-
-
-						</div>
-						<!-- 찜목록 end -->
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-   
+    </section><!--//mypage-->
     
     <!-- ******정당메이커 게임******* -->
     <section id="game" class="docs section">
@@ -723,6 +605,8 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
     
     <!-- ******당선인****** --> 
     <section id="contact" class="license section">
+        <div class="container">
+            <div class="contact-inner">
                 <h2 class="title  text-center">Who are you?</h2>
            <!-- 검색 -->
 		  <form class="form-inline" style="margin-left: 250px">
@@ -733,81 +617,72 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
 				  <option>정의</option>
 				</select>
 				<div class="form-group" >
-			    <input type="text" class="form-control" id="inputText" placeholder="검색어를 입력하세요." style="width: 500px">
+			    <input type="password" class="form-control" id="inputPassword2" placeholder="검색어를 입력하세요." style="width: 500px">
 			 	 </div>
 			  	<button type="submit" class="btn btn-primary">검색</button><br/>
 			</form>  	
 			
-		<!-- 상세프로필 -->
-		  <!-- 이미지 -->
-		   <form class="form-inline" style="margin-left: 250px">
-		   		    <!-- The Team -->
-					<div class="home-doctors  clearfix">
-					    <div class="container">
-					        <div class="row">
-
-						            <div class="col-lg-3 col-md-3 col-sm-6  text-center doc-item">
-				                        <div class="common-doctor animated fadeInUp clearfix ae-animation-fadeInUp">
-
-					                        <ul class="list-inline social-lists animate">
-												<li><a href="#"><i class="fa fa-skype"></i></a></li>
-												<li><a href="#"><i class="fa fa-skype"></i></a></li>
-												<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											</ul>
-
-	                                        <figure>
-								                    <img width="500" height="500" src="assets/images/moon.jpeg" class="doc-img animate attachment-gallery-post-single wp-post-image" alt="당선자"> 
-								            </figure>
-
-						                    <div class="text-content">
-						                        <h5>문재인</h5>
-						                        <!-- <div class="for-border"></div> -->
-						                        <h5><small>더불어 민주당</small></h5>
-						                    </div>
-						                </div>
-						            </div>
-						            
-						            <!-- 공약리스트 -->
-						            <div >
-											 <fieldset style="width: 500px">
-											  	 <table class="table table-striped table-hover " >
-													  <thead>
-													    <tr>
-													      <th>#</th>
-													      <th>Column heading</th>
-													      <th>Column heading</th>
-													      <th>Column heading</th>
-													    </tr>
-													  </thead>
-													  <tbody>
-													    <tr>
-													      <td>1</td>
-													      <td>Column content</td>
-													      <td>Column content</td>
-													      <td>Column content</td>
-													    </tr>
-													    <tr>
-													      <td>2</td>
-													      <td>Column content</td>
-													      <td>Column content</td>
-													      <td>Column content</td>
-													    </tr>
-													  </tbody>
-													</table> 
-											</fieldset>	
-						            </div>
-						            
-						            
-					 			</div>
-							</div>
-
-					</div>
-					<!-- //The Team -->
-					
-					
-		   </form>
+			<!-- 탭메뉴 -->
+			<div class="form-group" style="width: 800px; margin-left: 200px">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">상세프로필</a></li>
+				  <li class=""><a href="#promise" data-toggle="tab" aria-expanded="false">공약</a></li>
+				</ul>
+		    </div>
+		<div id="myTabContent" class="tab-content" style="width: 800px; margin-left: 200px">
 		
+		<!-- 상세프로필 -->
+		  <div class="tab-pane fade active in" id="profile" style="height: 500px">
+		  
+		  <!-- 이미지 -->
+		  	<div>
+			    <div style="position: absolute;" class="img-thumbnail">
+			        <div style="position: relative; top: 0px; left: 0px;"><img src="assets/images/moon.jpeg"></img></div>
+			    </div>
+<!-- 			    <div style="position: absolute;" class="img-thumbnail"> -->
+<!-- 			        <div style="position: relative; top: 240px; left: 0px;"><img src="assets/images/c_img.png"></img></div> -->
+<!-- 			    </div> -->
+			</div>
+			
+			<div>
+				
+			</div>
+			
+		  </div>
+		  
+		  <!-- 공약리스트 -->
+		  <div class="tab-pane fade" id="promise">
+				<div class="tab-pane fade active in" style="height: 500px">
+		  	 <table class="table table-striped table-hover ">
+				  <thead>
+				    <tr>
+				      <th>#</th>
+				      <th>Column heading</th>
+				      <th>Column heading</th>
+				      <th>Column heading</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td>1</td>
+				      <td>Column content</td>
+				      <td>Column content</td>
+				      <td>Column content</td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>Column content</td>
+				      <td>Column content</td>
+				      <td>Column content</td>
+				    </tr>
+				  </tbody>
+				</table> 
+		  </div>
+		  </div>
+		</div>
+		
+            </div><!--//contact-inner-->
+        </div><!--//container-->
     </section><!--//contact-->  
       
     <!-- ******FOOTER****** --> 
@@ -824,8 +699,7 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="assets/js/main.js"></script>  
-     <script type="text/javascript" src="assets/js/slide.js"></script>     
+    <script type="text/javascript" src="assets/js/main.js"></script>       
 </body>
 </html> 
 
