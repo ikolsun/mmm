@@ -78,7 +78,7 @@
     
     <!-- ******PROMO****** -->
     <section id="promo" class="promo section offset-header">
-        <div class="container text-center" style="height: 470px">
+        <div class="container text-center" style="height: 430px">
             <h2 class="title">말<img src="assets/images/logo/logo.png" width="180px" height="180px"><span class="highlight">하는대로</span></h2>
             <!-- 검색 -->
 		  <form class="form-inline">
@@ -723,7 +723,7 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
     
     <!-- ******당선인****** --> 
     <section id="contact" class="license section">
-                <h2 class="title  text-center">Who are you?</h2>
+           <h2 class="title  text-center">Who are you?</h2>
            <!-- 검색 -->
 		  <form class="form-inline" style="margin-left: 250px">
 			  	<select class="form-control">
@@ -740,12 +740,11 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
 			
 		<!-- 상세프로필 -->
 		  <!-- 이미지 -->
-		   <form class="form-inline" style="margin-left: 250px">
+		   <form class="form-inline" style="margin-left: 250px;">
 		   		    <!-- The Team -->
 					<div class="home-doctors  clearfix">
 					    <div class="container">
 					        <div class="row">
-
 						            <div class="col-lg-3 col-md-3 col-sm-6  text-center doc-item">
 				                        <div class="common-doctor animated fadeInUp clearfix ae-animation-fadeInUp">
 
@@ -757,17 +756,22 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
 											</ul>
 
 	                                        <figure>
-								                    <img width="500" height="500" src="assets/images/moon.jpeg" class="doc-img animate attachment-gallery-post-single wp-post-image" alt="당선자"> 
+								                    <img src="assets/images/jung.jpg" class="doc-img animate attachment-gallery-post-single wp-post-image" alt="당선자"> 
 								            </figure>
 
 						                    <div class="text-content">
-						                        <h5>문재인</h5>
+						                        <h5>우성오빠</h5>
 						                        <!-- <div class="for-border"></div> -->
-						                        <h5><small>더불어 민주당</small></h5>
+						                        <h5><small>다같이 살아요</small></h5>
 						                    </div>
 						                </div>
+						                <div>
+												<!-- LikeBtn.com BEGIN -->
+												<span class="likebtn-wrapper" data-identifier="item_1"></span>
+												<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+												<!-- LikeBtn.com END -->
+										</div>
 						            </div>
-						            
 						            <!-- 공약리스트 -->
 						            <div >
 											 <fieldset style="width: 500px">
@@ -797,18 +801,68 @@ lat=36.73819416328964&amp;lng=128.05056828320312&amp;t=1&amp;z=8&amp;l=col4&amp;
 													</table> 
 											</fieldset>	
 						            </div>
-						            
-						            
 					 			</div>
 							</div>
-
 					</div>
 					<!-- //The Team -->
 					
+					<!-- 댓글 리스트 -->
+						            <div >
+											 <fieldset style="width: 550px; margin-top: -100px">
+											  	 <table class="table table-striped table-hover " >
+													  <thead>
+													    <tr>
+													      <th>글번호</th>
+													      <th>평점</th>
+													      <th>내용</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <td>1</td>
+													      <td>5</td>
+													      <td>take my money</td>
+													    </tr>
+													    
+													  </tbody>
+													</table> 
+											</fieldset>	
+											<!-- 평점/댓글 -->
+					<div class="container" style="margin-left: 250px">
+							<div class="col-md-6">
+					            <div class="text-right">
+					                <a class="btn btn-primary" href="#reviews-anchor" id="open-review-box">코멘트 작성</a>
+					            </div>
+					        
+					            <div class="row" id="post-review-box" style="display:none; width: 500px; margin-left: 10px">
+					                <div class="col-md-12">
+					                <!-- 액션설정 -->
+					                    <form accept-charset="UTF-8" action="" method="post">
+					                        <input id="ratings-hidden" name="rating" type="hidden"> 
+					                        <textarea class="form-control animated" cols="60" id="new-review" name="comment" placeholder="50자이내 글을 작성하세요." rows="1"></textarea>
+					        
+					                        <div class="text-right">
+					                            <div class="stars starrr" data-rating="0"></div>
+					                            <a class="btn btn-default" href="#" id="close-review-box" style="display:none; ">
+					                            <span class="glyphicon glyphicon-remove"></span>취소</a>
+					                            <button class="btn btn-primary" type="submit">등록</button>
+					                        </div>
+					                    </form>
+					                </div>
+					            </div>
+					        </div> 
+					         
+							</div>
+						</div>
+					
+					
 					
 		   </form>
-		
+		   
     </section><!--//contact-->  
+  
+  <!-- 위로가기 -->  
+ <a id="top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="TOP" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>   
       
     <!-- ******FOOTER****** --> 
     <footer class="footer">
